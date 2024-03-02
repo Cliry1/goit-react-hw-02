@@ -5,3 +5,6 @@
 .buttonFeedback button{
   font-size: 20px;
 }
+.buttonFeedback button::first-letter{
+  text-transform: uppercase;
+}
