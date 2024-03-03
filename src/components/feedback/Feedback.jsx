@@ -5,16 +5,11 @@ export default function Feedback({clicks,total,positive}) {
 
   return (
   <>
-  {
-    total>0 &&
-      <>
-        <p>Good: {clicks.good}</p>
-        <p>Neutral: {clicks.neutral}</p>
-        <p>Bad: {clicks.bad}</p>
-        <p>Total: {total}</p>
-        <p>Positive: {positive}%</p>  
-      </> 
-  }
+    <p>Good: {clicks.good}</p>
+    <p>Neutral: {clicks.neutral}</p>
+    <p>Bad: {clicks.bad}</p>
+    <p>Total: {total}</p>
+    <p>Positive: {positive}%</p>  
   </>
   )
 }

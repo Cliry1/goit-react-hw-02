@@ -26,7 +26,7 @@ export default function App() {
   const resetList=()=>{
     setClics({
        good: 0, neutral: 0, bad: 0 
-    });;
+    });
   }
   const totalFeedback  = clicks.good + clicks.neutral + clicks.bad;
   const positive = Math.round((clicks.good+clicks.neutral)/totalFeedback*100);
@@ -35,8 +35,10 @@ export default function App() {
     <>
     <Description/>
     <Options  clicks = {clicks} updateClicks={updateFeedback} total={totalFeedback} resetList={resetList}/>
-    <Feedback clicks = {clicks} total={totalFeedback} positive={positive}/>
-    <Notification total={totalFeedback}/>
+    {totalFeedback>0 
+    ? <Feedback clicks = {clicks} total={totalFeedback} positive={positive}/>
+    : <Notification />
+    } 
     </>
 
   )

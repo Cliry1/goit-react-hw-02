@@ -1,12 +1,7 @@
-export default function Notification({total}) {
+export default function Notification() {
 
 
   return (
-  <>
-  {
-    total==0 && <p>No feedback yet</p>
-  }
-  
-  </>
+  <p>No feedback yet</p>
   )
 }
